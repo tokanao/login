@@ -2,11 +2,10 @@
 
 https://www.ruby-toolbox.com/categories/rails_authentication
 
----
 ## 各種共通 Rails プロジェクト作成
 ```bash
-rails new monban2 -d postgresql
-cd monban2
+rails new {proj_name} -d postgresql
+cd {proj_name}
 rbenv local 2.2.5
 rbenv rehash
 rbenv exec gem install bundler
@@ -17,7 +16,7 @@ rbenv exec gem which bundler
 ### DB作成と接続設定
 ```bash
 psql postgres
-postgres=# create database monban2  with owner="toka";
+postgres=# create database {db_name}  with owner="toka";
 vi config/database.yml
 ```
 
