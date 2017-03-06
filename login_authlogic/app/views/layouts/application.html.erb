@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authlogic</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if logged_in? %>
+  <%= current_user.email %>: 
+  <%= link_to "ログアウト", logout_path, method: :delete %>
+<% else %>
+  <%= link_to "ログイン", login_path %>
+  <%= link_to "新規登録", signup_path %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

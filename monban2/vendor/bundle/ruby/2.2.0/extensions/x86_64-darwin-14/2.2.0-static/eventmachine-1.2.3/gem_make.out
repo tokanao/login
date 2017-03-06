@@ -1,0 +1,12 @@
+/Users/toka/.rbenv/versions/2.2.5/bin/ruby -r ./siteconf20170303-16822-dri7vm.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20170303-16822-1r24ztr
