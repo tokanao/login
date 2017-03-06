@@ -76,16 +76,16 @@ nmap u <Plug>(emmet-update-tag)
 nmap ; <Plug>(emmet-expand-word)
 vmap , <Plug>(emmet-expand-abbr)
 nmap , <Plug>(emmet-expand-abbr)
-nmap  <Plug>TComment_
-nmap 1 <Plug>TComment_1
-nmap 2 <Plug>TComment_2
-nmap 3 <Plug>TComment_3
-nmap 4 <Plug>TComment_4
-nmap 5 <Plug>TComment_5
-nmap 6 <Plug>TComment_6
-nmap 7 <Plug>TComment_7
-nmap 8 <Plug>TComment_8
 nmap 9 <Plug>TComment_9
+nmap 8 <Plug>TComment_8
+nmap 7 <Plug>TComment_7
+nmap 6 <Plug>TComment_6
+nmap 5 <Plug>TComment_5
+nmap 4 <Plug>TComment_4
+nmap 3 <Plug>TComment_3
+nmap 2 <Plug>TComment_2
+nmap 1 <Plug>TComment_1
+nmap  <Plug>TComment_
 vmap 9 <Plug>TComment_9
 omap 9 <Plug>TComment_9
 vmap 8 <Plug>TComment_8
@@ -121,8 +121,8 @@ nmap ,s :source ~/.vimrc
 nmap ,v :tabnew ~/.vimrc
 nmap ,e :Sexplore
 map Q gq
-smap \__ <Plug>TComment_\__
 nmap \__ <Plug>TComment_\__
+smap \__ <Plug>TComment_\__
 nmap \ru :RuboCop
 nmap <silent> \f <Plug>(migemo-searchchar)
 map \_s <Plug>TComment_\_s
@@ -292,20 +292,20 @@ vmap ic <Plug>TComment_ic
 noremap j gj
 noremap k gk
 noremap n nzz
-nnoremap <SNR>122_: :=v:count ? v:count : ''
-nnoremap <Plug>TComment_ :TComment
-snoremap <Plug>TComment_\__ :TComment
-nnoremap <Plug>TComment_\__ :TComment
-nnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
-nnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
-nnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
-nnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
-nnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
-nnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
-nnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
-nnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
-nnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
 nnoremap <SNR>116_: :=v:count ? v:count : ''
+nnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
+nnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
+nnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
+nnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
+nnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
+nnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
+nnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
+nnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
+nnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
+nnoremap <Plug>TComment_\__ :TComment
+snoremap <Plug>TComment_\__ :TComment
+nnoremap <Plug>TComment_ :TComment
+nnoremap <SNR>122_: :=v:count ? v:count : ''
 map <S-Insert> <MiddleMouse>
 noremap <M-Down> }
 noremap <D-Down> <C-End>
@@ -449,10 +449,10 @@ imap r <Plug>TComment_r
 imap   <Plug>TComment_ 
 imap p <Plug>TComment_p
 imap  <Plug>TComment_
-abbr perform start_time = Time.now; p "処理概要 #{Time.now - start_time}s"
-abbr logd logger.debug("DEBUG: params => #{params}")
-abbr deprecated # HACK: deprecated.
 abbr bind binding.pry
+abbr deprecated # HACK: deprecated.
+abbr logd logger.debug("DEBUG: params => #{params}")
+abbr perform start_time = Time.now; p "処理概要 #{Time.now - start_time}s"
 abbr dumptemplatevar <pre><!--{php}-->print_r(get_template_vars());<!--{/php}--></pre>
 abbr debugcon <!--{debug}-->
 abbr tempurl <!--{$TPL_URLPATH}-->
@@ -526,7 +526,7 @@ set nowrapscan
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/rails_work/login_authlogic
+cd ~/rails_work/login/login_authlogic
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -553,13 +553,13 @@ badd +402 ~/.vimrc
 badd +7 app/views/user_sessions/new.html
 badd +1 app/views/layouts/application.html.erb
 badd +1 app/views/common/_errors.html
-badd +0 ~/rails_work/authlogic/app/views/users/new.html
-badd +0 ~/rails_work/authlogic/app/controllers/users_controller.rb
-badd +0 ~/rails_work/authlogic/app/models/user.rb
-badd +0 ~/rails_work/authlogic/app/views/user_sessions/new.html
-badd +0 ~/rails_work/authlogic/app/controllers/user_sessions_controller.rb
-badd +0 ~/rails_work/authlogic/app/models/user_session.rb
-badd +0 app/controllers/dashboards_controller.rb
+badd +1 ~/rails_work/authlogic/app/views/users/new.html
+badd +1 ~/rails_work/authlogic/app/controllers/users_controller.rb
+badd +1 ~/rails_work/authlogic/app/models/user.rb
+badd +1 ~/rails_work/authlogic/app/views/user_sessions/new.html
+badd +1 ~/rails_work/authlogic/app/controllers/user_sessions_controller.rb
+badd +1 ~/rails_work/authlogic/app/models/user_session.rb
+badd +1 app/controllers/dashboards_controller.rb
 argglobal
 silent! argdel *
 set stal=2
@@ -576,9 +576,9 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 10 + 27) / 55)
-exe '2resize ' . ((&lines * 22 + 27) / 55)
-exe '3resize ' . ((&lines * 18 + 27) / 55)
+exe '1resize ' . ((&lines * 17 + 27) / 55)
+exe '2resize ' . ((&lines * 13 + 27) / 55)
+exe '3resize ' . ((&lines * 20 + 27) / 55)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -697,12 +697,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 13 - ((5 * winheight(0) + 5) / 10)
+let s:l = 13 - ((9 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 13
-normal! 041|
+normal! 044|
 wincmd w
 argglobal
 edit app/controllers/application_controller.rb
@@ -823,12 +823,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 8 - ((7 * winheight(0) + 11) / 22)
+let s:l = 14 - ((5 * winheight(0) + 6) / 13)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
-normal! 03|
+14
+normal! 07|
 wincmd w
 argglobal
 edit config/routes.rb
@@ -949,16 +949,16 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 12 - ((9 * winheight(0) + 9) / 18)
+let s:l = 11 - ((10 * winheight(0) + 10) / 20)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
-normal! 025|
+11
+normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 10 + 27) / 55)
-exe '2resize ' . ((&lines * 22 + 27) / 55)
-exe '3resize ' . ((&lines * 18 + 27) / 55)
+exe '1resize ' . ((&lines * 17 + 27) / 55)
+exe '2resize ' . ((&lines * 13 + 27) / 55)
+exe '3resize ' . ((&lines * 20 + 27) / 55)
 tabedit app/controllers/dashboards_controller.rb
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -969,8 +969,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 26 + 27) / 55)
-exe '2resize ' . ((&lines * 25 + 27) / 55)
+exe '1resize ' . ((&lines * 18 + 27) / 55)
+exe '2resize ' . ((&lines * 33 + 27) / 55)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -1089,12 +1089,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 13) / 26)
+let s:l = 1 - ((0 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 03|
+1
+normal! 0
 wincmd w
 argglobal
 edit app/controllers/user_sessions_controller.rb
@@ -1215,16 +1215,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 18 - ((7 * winheight(0) + 12) / 25)
+let s:l = 25 - ((22 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-18
-normal! 05|
+25
+normal! 0
 wincmd w
-2wincmd w
-exe '1resize ' . ((&lines * 26 + 27) / 55)
-exe '2resize ' . ((&lines * 25 + 27) / 55)
+exe '1resize ' . ((&lines * 18 + 27) / 55)
+exe '2resize ' . ((&lines * 33 + 27) / 55)
 tabnext 2
 set stal=1
 if exists('s:wipebuf')

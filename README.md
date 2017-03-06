@@ -2,6 +2,9 @@
 
 https://www.ruby-toolbox.com/categories/rails_authentication
 
+※ 各プロジェクト配下のソースのポイントに "TODO" を埋め込んでいる
+
+---
 ## 各種共通 Rails プロジェクト作成
 ```bash
 rails new {proj_name} -d postgresql
@@ -29,8 +32,6 @@ vi Gemfile
   gem 'monban'
   gem 'monban-generators'
 
-```
-```
 bundle install --path vendor/bundle
 ```
 
@@ -58,9 +59,5 @@ root 'dashboards#show'
 vi app/views/layouts/application_controller.rb
 ```
 
-rails s   ＃ rails 起動
-
-
-## Sorcery
-
-- gem 追加と bundle 実行
+### rails 起動
+rails s
