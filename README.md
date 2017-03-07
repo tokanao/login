@@ -2,7 +2,7 @@
 
 https://www.ruby-toolbox.com/categories/rails_authentication
 
-※ 各プロジェクト配下のソースのポイントに "TODO" を埋め込んでいる
+~~※ 各プロジェクト配下のソースのポイントに "TODO" を埋め込んでいる~~
 
 ---
 ## 各種共通 Rails プロジェクト作成
